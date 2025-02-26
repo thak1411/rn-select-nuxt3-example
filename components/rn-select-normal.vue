@@ -24,10 +24,6 @@ const props = defineProps({
     type: Array,
     default: [],
   },
-  zIndex: {
-    type: [Number, null],
-    default: null,
-  },
 })
 
 const selected = defineModel()
