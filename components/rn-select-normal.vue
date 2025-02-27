@@ -42,15 +42,17 @@ const clickOutside = (event) => {
   }
 }
 
+const getWindow = element => {
+  return element.ownerDocument ? element.ownerDocument.defaultView : window
+}
+
 onMounted(() => {
-  document.addEventListener('click', clickOutside)
+  getWindow(selectRef.value).addEventListener('click', clickOutside)
 })
 
 onUnmounted(() => {
-  document.removeEventListener('click', clickOutside)
+  getWindow(selectRef.value).removeEventListener('click', clickOutside)
 })
-
-
 </script>
 
 <style scoped>

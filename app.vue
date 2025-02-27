@@ -18,6 +18,16 @@
         <template #option="{ option }">{{ option.label }}</template>
       </rn-select-normal>
     </div>
+    <br>
+    <h1>Rn-Select Overflow Solution</h1>
+    <div class="wrapper2">
+      AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+      <rn-select v-model="selected" :options="items">
+        <template v-if="selected == -1" #label>아이템을 선택하세요.</template>
+        <template v-else #label="{ option }">{{ option.label }}</template>
+        <template #option="{ option }">{{ option.label }}</template>
+      </rn-select>
+    </div>
   </div>
 </template>
 
